@@ -1,0 +1,41 @@
+#rosso{
+    background-color: red;
+}
+
+.giallo{
+    background-color: yellow;
+}
+
+/* 
+div = 1
+classi = 10
+id = 100
+inline style = 1000
+*/
+
+#conflitti .verde{/* 100 + 10 = 110 */
+    background-color: green;
+
+}
+
+#conflitti div{/* 100 + 1 = 101*/
+    background-color: blue;
+}
+
+#conflitti div{/* vince perchè si trova in basso */
+    background-color: black;
+}
+
+#conflitti #rosa{/*100 + 100 = 200*/
+    background-color: pink;
+}
+
+#conflitti #rosa.verde{/*100 + 100 + 10 = 210*/
+    background-color: purple;
+}
+
+/* 
+#conflitti div{meglio essere  più specifici e quindi utilizzare più id e più classi
+    background-color: black !important;
+}
+*/

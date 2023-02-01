@@ -1,0 +1,46 @@
+/*
+posso mudificare la dimensione assoluta di tutti i tasti del body
+ body{
+    font-size: 20px; => dimensionamento assoluto
+}
+*/
+
+/*
+@font-face{
+    font-family: FontPersonale;
+    src: url(../font/font scaricato.otf) format("opentype"); fare una ricerca online del nome del formato ovvero dopo il punto
+     x il format e deve essere diverso dal url
+    oppure c'è un modo come descritto nella teoria a pagina/slide 20
+}
+*/
+
+:root{ /* è un elemento predefinito che sta a livello base ed ha una grandezza di 16px ma se modificato come adesso cambia tutto 
+    il contenuto "font size" della pagina cambiando solamente i px del :rooter*/
+    font-size: 25px;
+}
+
+#t1{
+    font-size: 1rem; /* 1 rem è uguale a 16px, inoltre lavorare in rem è molto più conveniente!! */
+    color: #fc7;/* */
+    font-family: FontPersonale;
+}
+
+#t2{
+    font-size: 16px;
+    color: rgb(red, green, blue); /* è una funzione dove bisogna inserire dei parametri, questi valori vanno da 0 a 256*/
+    color: rgba(red, green, blue, alpha); /* a differenza del primo ha 4 parametri 
+    font-family: ; inserire font scaricato
+    font-weight: ; si utilizza x il peso del font scaricato 
+    */
+}
+
+#parent{
+    font-size: 50px;
+}
+
+#t3{
+    font-size: 1em;
+    font-weight: bold;
+    font-style: italic;
+}
+

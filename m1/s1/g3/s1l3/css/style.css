@@ -1,0 +1,26 @@
+#logo{
+    text-align: center;
+}
+
+header h3{
+    color: rgb(6, 85, 6);
+    background-color: rgb(245, 239, 218);
+}
+
+#content{
+    font-family: 'Lato', sans-serif;
+    margin: 0 auto;
+    width: 40%;
+    text-align: left;
+}
+
+.feat{
+    border-left: 1px solid;
+    padding-left: 1%;
+    color: rgb(221, 55, 4);
+    font-weight: lighter;
+}
+
+.border{
+    border-bottom: 22% green;
+}
