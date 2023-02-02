@@ -1,0 +1,85 @@
+/*stili generali */
+a:visited a:active{
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+/*stili generali */
+
+
+section > span{
+    text-decoration: line-through;
+}
+
+section + small{ /* significa che dopo il tag di chiusura section ritornami solo il primo tag small*/
+    font-weight: bold;
+}
+
+section ~ small{/* tutti gli small dopo una section ~(si fa con alt+126 = ~)*/
+    color: red;
+}
+
+/*esempio menu mobile per css*/
+#toggle:checked{
+    display: none;
+}
+
+#menù{
+    background-color: beige;
+    height: 0; /* è un modo x nascondere l'elemento*/
+    overflow: hidden;
+    transition: height 0.3s;
+}
+
+#toggle:checked + #menù{ /*cliccando su menù appare la lista nascosta*/
+    height: 70px;
+}
+
+#menù li:hover{/*cambia colore quando si passa il cursore sulla lista*/
+    background-color: white;
+}
+
+/*tabella*/
+
+table{
+    width: 100%;
+}
+
+table td{
+    border: 1px solid black;
+}
+
+table tr:first-child{/*la prima riga*/
+    background-color: grey;
+}
+
+table tr:nth-of-type(odd):not(.bianca){/*la riga che inserisci nelle parentesi*/
+    background-color: grey;
+}
+
+table tr:first-child td:first-child{/*prima riga e prima cella*/
+    background-color: black;
+    color: white;
+}
+
+/*pseudo elementi*/
+table tr:first-child td::after{/**/
+    content: "+"; /*si attiva con content*/
+}
+
+table tr:first-child td::before{/**/
+    content: "+"; /*si attiva con content*/
+    animation-name: ruota;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    display: inline-block;
+}
+@keyframes ruota{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(360deg);}
+    100%{transform: rotate(0deg);}
+
+}
