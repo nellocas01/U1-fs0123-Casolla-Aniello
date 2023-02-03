@@ -1,0 +1,153 @@
+/* Your styles here */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Open Sans';
+    line-height: 1.65;
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 450px;
+    text-align: center;
+    border-color: #dee1e3;
+}
+
+.img{
+    background-color: black;
+    margin: 0px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+}
+
+h1{
+    margin-bottom: 5px;
+    color: #25a2c3;
+    font: bold;
+    font-size: 45px;
+}
+
+/*
+.content-banner p{
+    color: ;
+}
+*/
+
+.main{
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 11px;
+    font-weight: 500;
+    /*box-shadow: ;*/
+}
+
+.main h4{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+}
+
+.content-banner{
+    background-image: url(../images/banner.jpg);
+    max-width: 450px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.content-banner a{
+    background-color: #f04c2f;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font: bold;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.content{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/*
+.notebook{
+    border-radius: 100% 100% / 100% 100%;
+}*/
+
+.content h4{
+    color: #25a2c3;
+}
+
+/*
+.content p{
+
+}*/
+
+.a1{
+    background-color: #e22d0e;
+    color: white;
+}
+
+.a1 h3{
+    margin-bottom: 5px;
+    font: bold;
+    font-size: 45px;
+    text-align: center;
+    padding: 30px;
+}
+
+.a1 p{
+    font-style: italic;
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.a1 h6{
+    padding-bottom: 8px;
+    font-style: normal;
+}
+
+.content img{
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    background-color: #25a2c3;
+    color: #c8e7f0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer h2{
+    margin-bottom: 5px;
+    font: bold;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a{
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 4px;
+}
+
+.hr{
+    margin: 0 auto;
+    border-bottom: 1px white;
+}
+
+/*
+.fa-sharp fa-solid fa-square-phone::before{
+    display: inline-block;
+}*/
+
+footer p{
+    display: inline-block;
+}
