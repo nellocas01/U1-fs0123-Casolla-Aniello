@@ -3,7 +3,7 @@
 
 /*var pet = 'gatto';
 var Pet = 'cane';*/
-var petPreferito = 'criceto';
+var petPreferito = 'balena';
 var PetPreferito = 'coniglio';
 
 var $pet = 'giraffa';
@@ -18,7 +18,7 @@ console.log(_pet2);
 document.getElementById("animali").innerHTML = "<b>Il mio animale preferito è </b>";
 
 
-var ss = 'gallina'; //se l'animale sarà di sesso femminile il risultato sarà "la + animale", se di sesso maschile "il + animale"
+var ss = petPreferito; //se l'animale sarà di sesso femminile il risultato sarà "la + animale", se di sesso maschile "il + animale"
 
 var f = 'la'
 var m = 'il'
