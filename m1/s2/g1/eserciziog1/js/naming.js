@@ -18,7 +18,7 @@ console.log(_pet2);
 document.getElementById("animali").innerHTML = "<b>Il mio animale preferito è </b>";
 
 
-var ss = 'gallina';
+var ss = 'gallina'; //se l'animale sarà di sesso femminile il risultato sarà "la + animale", se di sesso maschile "il + animale"
 
 var f = 'la'
 var m = 'il'
