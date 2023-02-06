@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="testo">
+
+    </div>
+
+   
+
+    <script>
+
+        document.getElementById("testo").innerHTML = "<b>ciao</b>"; //con innerhtml è possibile scrivere del codice a differenza degli altri
+
+        document.write('ciao')//meglio nn utilizzarlo poichè non è preciso come gli altri ed è pericoloso x il lavoro del codice
+
+        console.log('ciao')//serve ai sviluppatori x annotare e x poter analizzare i dati contenuti nelle variabili, può svolgere anche dei calcoli
+        console.log(21+6)//con i calcoli nn usare le virgolette altrimenti li legge come testo
+        console.log('%c testo colorato', 'color:red')//con il simbolo % è possibile inserire un secondo 'argomento' e utilizzare anche del css...
+    </script>
+</body>
+</html>
