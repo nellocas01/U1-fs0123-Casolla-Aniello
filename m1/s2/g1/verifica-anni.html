@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .test{
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var anni = prompt('quanti anni hai')//a differenza di alert, il prompt salva il dato inserito e lo restituisce sempre in stringa
+
+        console.log(anni)
+
+        if(anni >= 18 && anni <= 110){//l'operatore && ti permette di confrontare i dati e quindi dare anche un massimale come questo caso fino a 110
+            document.write('<div class="test">sei maggiorenne, puoi accedere</div>');//in questo modo si può dare uno stile se l'età va tra i 18 e i 110
+        }else if(anni > 110){
+            document.write('sei antico');
+        }
+        else{
+            document.write('sei minorenne');
+        }
+        
+    </script>
+</body>
+</html>
