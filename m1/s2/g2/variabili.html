@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /*hoisting: javascript recupera la funzione che si richiama, in qualsiasi riga si trova, e si porta dietro anche i valori; 
+        invece con le variabili la trova ma non recupera i valori assegnati*/
+
+        //caso 1
+        var a;//undefined, questa variabile non ha valore
+        console.log(a)
+
+        //caso 2 
+        console.log(a)//errore rosso, questa variabile 'a' non esiste
+
+        //caso3
+        console.log(a)//undefined, la variabile c'è ma visto che è sotto non trova il valore
+        var a = 5;
+
+        //caso4, corretto
+        var a = 5;
+        console.log(a)//risulta correttamente il valore
+
+
+
+
+        test()
+        function test(){
+
+        }
+    </script>
+</body>
+</html>
