@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+    //le variabili let sono soggette al blocco(blokscope) ovvero che sono leggibili solo all'interno del blocco {}
+        //let a = 5;
+
+        //questo è un blocco sintattico
+        {
+            var a = 0;//var invece nn è soggetta a blockscope, quindi legge 
+            console.log(a)
+        }
+        console.log(a)
+
+        {
+            let b = 1;
+            //var b = 3; non si può fare xke b già è stato dichiarato
+            console.log(b)
+        }
+        //console.log(b) non lo legge xke si trova fuori dal blocco {}
+
+        {
+            let b = 2
+            console.log(b)//funzionamento corretto, lo legge nel blocco
+        }
+
+        var c = 2; //viene letto fuori dal blocco riga 41
+        {
+            let c = 2; // in questo caso ha priorità let poichè è nel blocco
+            console.log(c)//si riferisce alla riga 38 let
+        }
+        console.log(c)//si riferisce alla riga 36 var
+
+        //esempio
+        let condizione = true
+        let numero;
+        if(condizione){
+             numero = 90;
+        }else{
+             numero = 50;
+        }
+        console.log(numero);//errore xke let nn esce dal blocco, quindi dichiarare let fuori dal blocco (let = numero) e riportare numero nel blocco (numero = NUM)
+    </script>
+</body>
+</html>
