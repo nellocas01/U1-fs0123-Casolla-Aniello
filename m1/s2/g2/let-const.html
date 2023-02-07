@@ -49,6 +49,23 @@
              numero = 50;
         }
         console.log(numero);//errore xke let nn esce dal blocco, quindi dichiarare let fuori dal blocco (let = numero) e riportare numero nel blocco (numero = NUM)
+
+        //CONST sono variabili che non possono essere riassegnate
+        const D = 4; //il nome della costante deve essere maiuscolo
+        // D = 9 questo nn si può fare
+
+        //valori interni
+        const OGGETTO = {
+            nome: 'Nello' ,
+            cognome: 'Casolla'
+        }
+        
+        //Object.freeze(OGGETTO) => così congeliamo l'oggetto in modo da fargli mantenere il primo valore 'Nello'
+        //in questo caso accetta il cambio del valore della costante
+        OGGETTO.nome = 'Mario'
+        console.log(OGGETTO)
+
+
     </script>
 </body>
 </html>
