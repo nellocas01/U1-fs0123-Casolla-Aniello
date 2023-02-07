@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //operatori di assegnazione
+        let a = 2;
+        let b = 4;
+        console.log(b)//4
+        b = 6;//perdo il vecchio valore (4)
+        console.log(b)//6
+
+        a += 2;//diventa un 2 + 2 = 4
+        console.log(a)
+
+        a -= 2;//diventa un 4 - 2 = 2
+        console.log(a)
+
+        let c = '<div>Ciao'
+
+            c += '</div>';//aggiungo la chiusura del div; primo modo
+            //c = c + '</div>'; secondo modo
+            console.log(c);//<div>Ciao</div>
+
+            //operatori logici e di comparazione
+            let anni = 30;
+            console.log(anni < 18)//false
+            console.log(anni > 18)//true
+            console.log(18 > 18)//false, 18 è uguale a 18, non superiore
+            console.log(18 >= 18)//true, se è uguale a 18 o superiore
+            console.log(18 <= 18)//true, se è uguale a 18 o inferiore
+            console.log(18 == 18)//true xke è uguale, esatta corrispondenza e per ricavare un booleano
+            console.log(18 != 18)//falso, xke è uguale; != sta per diverso
+
+            console.log(anni == '30');//true, xke avviene una conversione e una comparazione, quindi si valuta il dato ma non il tipo di dato
+            console.log(anni === '30');//false, xke con === valuta anche il tipo di dato oltre al dato
+
+            /*
+            altra possibilità: !== 
+            devono essere differenti il tipo di dato o il valore 
+            */
+
+            console.log(anni >= 18 && anni <= 110);//&&(and) restituisce true se entrambe le comparazioni sono vere, quindi c'è una correlazione tra 18 e 110
+            console.log(anni >= 18 || anni <= 110);// ||(or)
+            console.log(!(anni >= 18 && anni <= 110));// il ! annulla il valore reale true con false
+
+    </script>
+</body>
+</html>
