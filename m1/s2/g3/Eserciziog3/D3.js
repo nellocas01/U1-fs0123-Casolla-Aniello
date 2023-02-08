@@ -16,8 +16,8 @@ if (a > b) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-var num = 2;
-if (num != 5) {
+var num = 56;
+if (5 != num) {
   console.log("not equal");
 } else {
   console.log("equal");
@@ -27,8 +27,8 @@ if (num != 5) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let x = 25;
-if (x % 5 == 5) {
+let x = 255;
+if (x % 5 == 0) {
   console.log("divisibile per 5");
 } else {
   console.log("non divisibile per 5");
@@ -60,7 +60,7 @@ let carrello = 49;
 let promozione = 50;
 let spedizione = 10;
 let totalShoppingCart = carrello;
-let blackfriday = 20;
+let blackfriday = carrello - (carrello*20/100);
 if (carrello > promozione) {
   console.log("spedizione gratuita");
 } else if (carrello < promozione) {
@@ -72,8 +72,6 @@ if (carrello > promozione) {
   */
 
   /* SCRIVI QUI LA TUA RISPOSTA */
-} else if ((carrello * blackfriday / 100) > promozione) {
-  console.log("spedizione gratuita");
 }
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -93,7 +91,10 @@ console.log(numerati);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let numero = '15';
+let numero2 = 15;
 console.log("this is a ", typeof numero);
+console.log("this is a ", typeof numero2);
+
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
@@ -158,6 +159,7 @@ console.log(me);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let arrVuoto = [];
+console.log(arrVuoto);
 arrVuoto.push(1,2,3,4,5,6,7,8,9,10)
 console.log(arrVuoto);
 /* ESERCIZIO 15
