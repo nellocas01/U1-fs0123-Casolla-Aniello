@@ -36,6 +36,23 @@
         //utilizzo dei metodi
         pizza.mostraPrezzo();
         //mostraPrezzo();//non esiste
+
+        {
+            //costruttore
+            function Pizza(_gusto,_prezzo){
+                this.gusto = _gusto;
+                this.prezzo = _prezzo;
+                this.mostraPrezzo() = function(){
+                    console.log(`La pizza ${this.gusto} costa ${this.prezzo}€`);
+                }
+            }
+
+            let margherita = new Pizza('Margherita',5);
+            let diavola = new Pizza('Diavola',1);
+
+            console.log(margherita);
+            console.log(diavola);
+        }
     </script>
 </body>
 </html>
