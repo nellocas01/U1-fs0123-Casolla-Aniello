@@ -72,6 +72,8 @@ if (carrello > promozione) {
   */
 
   /* SCRIVI QUI LA TUA RISPOSTA */
+}else if(blackfriday < promozione){
+  console.log("Buon Blackfriday");
 }
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
