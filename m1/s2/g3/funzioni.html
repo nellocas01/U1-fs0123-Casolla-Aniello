@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //fase di definizione 
+        function saluto(){
+            console.log('ciao');
+        }
+
+        saluto();//lancio della funzione,si può invocare sia prima che dopo (hoysting)
+
+        function restituisciSaluto(){
+            return 'benvenuto';//return si utilizza solo all'interno delle funzioni, restituisce la stringa
+            //ci vuole un solo return per funzione 
+            //return termina la funzione
+        }
+        console.log(restituisciSaluto());
+
+        let stringa = restituisciSaluto();
+        console.log(stringa);
+
+        //blockscope nelle funzioni, le variabili si possono utilizzare solo all'interno della funzione 
+        let a = 0;
+
+        function scope(){
+            console.log('let a = ' + a);//a è raggiungibile xke è globale
+            var b = 100;//anche var è soggetta a blockscope, e rimarrà all'interno della funzione
+        }
+
+        scope();
+        //console.log(b);//nasce dentro la funzione, non è raggiungibile dall'esterno e da errore
+
+        /*
+        funzioni parametriche
+        */
+
+        function somma(a,b){//questa funzione accetta in ingresso 2 argomenti a cui si darà un valore
+            console.log(a + b);
+        }
+
+        somma(2,6);//richiamo e lancio la funzione assegnandogli dei valori ad a e b
+        somma(5,6);
+
+        //closure
+        function funzione1(){
+            let a = 100;//questa variabile è globale sia per funzione 1 che funz2
+
+            function funzione2(){//non posso usarla fuori da funzione1, ma richiamare la 1 che si porta anche la 2 insieme
+                let x = 3;//funzione 1 nn potrà usare x, xke nessuna variabile può uscire dalla funzione che nasce
+                console.log(a + x);
+            }
+
+            //x non è raggiungibile
+            funzione2();
+        }
+        
+        funzione1();//lancio di entrambe le funzioni
+
+    </script>
+</body>
+</html>
