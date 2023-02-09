@@ -37,6 +37,19 @@
         })
         console.log(numerix2);
 
+        //filter si usa x filtrare i dati ma nn modificarli, e restituisce sempre un array
+        let numeriFiltrati = numeri.filter(function(n){
+            return n > 3;//vuole un booleano
+        })
+        console.log(numeriFiltrati);
+
+        //find a differenza di filter nn restituisce un array ma solo il primo valore trovato che da true in questo caso 4 e si ferma
+        let numeroProvato = numeri.find(function(n){
+            return n > 3;//vuole un booleano
+        })
+        console.log(numeroProvato);
+
+
     </script>
 </body>
 </html>
