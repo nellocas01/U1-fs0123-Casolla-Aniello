@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //con variabile incrementata
+        for(let i = 0;i < 10;i++){//è l'unico che si utilizza ; nelle () e nn la virgola; 
+        document.write(i);
+        }
+
+        document.write('<hr>');
+
+         //con variabile decrementata
+         for(let i = 9;i >= 0;i--){//va da 9 a 0, e potrebbe anche con i numeri negativi(-1-2-3);
+        document.write(`<div>${i}</div>`);
+        }
+
+        document.write('<hr>');
+
+
+        let pizze = ['Margherita','Diavola','Marinara','Mimosa'];
+        for(let i = 0; i < pizze.length; i++){//con length stamperà tutto l'array
+            document.write(`<div>${pizze[i]} </div>`)
+            
+        }
+    </script>
+</body>
+</html>
