@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <script>
 
         //array.metodo(funzione)//callback è una funzione che si utilizzerà in futuro da un'altra funzione
 
-        let pizze = ['Margherita','Diavola','Marinara','Mimosa']
+        let pizze = ['Margherita', 'Diavola', 'Marinara', 'Mimosa']
 
         console.log(pizze);
         //map serve x modificare ogni elemento dell'array e ne genera uno diverso
-        let pizzeDiv = pizze.map(function(valore){
+        let pizzeDiv = pizze.map(function (valore) {
             return `<div>${valore}</div`
         })
         console.log(pizzeDiv);
@@ -24,32 +26,54 @@
 
 
         //foreach serve a ciclare gli array e fare operazioni generiche
-        pizze.forEach(function(valore){//passare una funzione che dice cosa fare passandogli un parametro, e cicla l'array
+        pizze.forEach(function (valore) {//passare una funzione che dice cosa fare passandogli un parametro, e cicla l'array
 
-        document.write(valore);
+            document.write(valore);
 
         })
 
         //MAP
-        let numeri = [1,2,3,4,5,6,7,8,9,10];
-        let numerix2 = numeri.map(function(n){
+        let numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let numerix2 = numeri.map(function (n) {
             return n * 2;
         })
         console.log(numerix2);
 
         //filter si usa x filtrare i dati ma nn modificarli, e restituisce sempre un array
-        let numeriFiltrati = numeri.filter(function(n){
+        let numeriFiltrati = numeri.filter(function (n) {
             return n > 3;//vuole un booleano
         })
         console.log(numeriFiltrati);
 
         //find a differenza di filter nn restituisce un array ma solo il primo valore trovato che da true in questo caso 4 e si ferma
-        let numeroProvato = numeri.find(function(n){
+        let numeroProvato = numeri.find(function (n) {
             return n > 3;//vuole un booleano
         })
         console.log(numeroProvato);
 
 
+        //REDUCE è potentissimo, 
+        numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        let somma = numeri.reduce(function (p, c) {
+
+            return p + c;
+        })
+        console.log(somma);
+
+
+        number =[1,20,300,400000]
+        let numeroGrande = number.reduce(function (p, c) {//restituisce il numero più grande dell'array
+            if (p > c) {
+                return p;
+            } else {
+                return c;
+            }
+
+        })
+        console.log(numeroGrande);
+
     </script>
 </body>
+
 </html>
