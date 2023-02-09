@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //array.metodo(funzione)//callback è una funzione che si utilizzerà in futuro da un'altra funzione
+
+        let pizze = ['Margherita','Diavola','Marinara','Mimosa']
+
+        console.log(pizze);
+        //map serve x modificare ogni elemento dell'array e ne genera uno diverso
+        let pizzeDiv = pizze.map(function(valore){
+            return `<div>${valore}</div`
+        })
+        console.log(pizzeDiv);
+
+
+
+        //foreach serve a ciclare gli array e fare operazioni generiche
+        pizze.forEach(function(valore){//passare una funzione che dice cosa fare passandogli un parametro, e cicla l'array
+
+        document.write(valore);
+
+        })
+
+        //MAP
+        let numeri = [1,2,3,4,5,6,7,8,9,10];
+        let numerix2 = numeri.map(function(n){
+            return n * 2;
+        })
+        console.log(numerix2);
+
+    </script>
+</body>
+</html>
