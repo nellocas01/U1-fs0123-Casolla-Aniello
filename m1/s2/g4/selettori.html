@@ -9,12 +9,13 @@
 <body>
     <div id="test">Hello World!</div>
 
-    
+    <div id="test">Hello World!</div>
     <div class="elemento"></div>
     <div class="elemento"></div>
     <div class="elemento"></div>
     <div class="elemento"></div>
     <div class="elemento"></div>
+    <div></div>
 
     <script>
 
@@ -34,6 +35,45 @@
         elemento.textContent = 'ciao';
     }
     console.log(elementi);
+
+    {
+
+let test = document.getElementById("test");//un solo elemento
+console.dir(test)
+
+console.log(test.innerHTML)//lettura
+
+test.innerHTML = 'Ciao Mondo!'
+test.style.color = 'red';
+
+
+let elementi = document.getElementsByClassName('elemento')//lista di elementi
+//non posso ciclarlo con foreach
+
+let divs = document.getElementsByTagName('div');//lista di elementi
+console.log(divs)
+
+for(let d of divs){
+    d.innerHTML = 'Ciao';
+    d.style.backgroundColor = 'yellow';
+}
+/* oppure con un for
+for(let i = 0; i < divs.length; i++){
+    divs[i].innerHTML = 'Ciao';
+}
+*/
+}
+
+{
+//nuovi selettori
+
+let test = document.querySelector('#test');//1 solo elemento
+let primoElemento = document.querySelector('.elemento')//1 solo elemento
+
+
+let tuttiElementi = document.querySelectorAll('.elemento')//sempre 1 array
+
+}
 
     </script>
 </body>
