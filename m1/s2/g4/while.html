@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //il while lo utilizziamo per ciclare qualsiasi cosa, esso non prevede il momento che si deve fermare a meno che nn gli viene detto
+        //serve 
+        let i = 0;
+        while(i < 15){//finchè(while) è inferiore a 15
+            document.write(i);//scrivi a schermo il valore di i
+            i++;//incrementa i di 1, torna alla riga 14
+        }//si deve salvare il contenuto alla fine del ciclo ctrl+s
+
+        document.write('<br>il ciclo ha finito<br>')
+
+        //esempi con break e continue
+        i = 0;//resetto la i a 0
+        while(i <= 5){
+            if(i == 2){
+                i++;
+                continue;//quando i sarà uguale a 2 si ferma e ricomincia col valore 3, quindi salta all'iterazione successiva
+            }
+            document.write(i);
+            i++;
+        }
+
+        document.write('<br>')
+        i = 0;//resetto la i a 0
+        while(i <= 5){
+            if(i == 2){
+                i++;
+                break;//termina il ciclo quando i sarà 2
+            }
+            document.write(i);
+            i++;
+        }
+        
+        /*
+        let x = 0;
+        setInterval(function(){ si utilizza x le animazioni
+            console.log(x);
+            x++;
+
+        }, 1000);
+        */
+    </script>
+</body>
+</html>
