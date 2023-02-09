@@ -26,9 +26,44 @@
 
 
         let pizze = ['Margherita','Diavola','Marinara','Mimosa'];
-        for(let i = 0; i < pizze.length; i++){//con length stamperà tutto l'array
+        for(let i = 0; i < pizze.length; i++){//con length stamperà tutto l'array, quindi stiamo dicendo data una
+        // variabile i che vale 0, controlla se è inferiore alla lunghezza delle pizze, se è vera fai un div
             document.write(`<div>${pizze[i]} </div>`)
-            
+        }
+        //non utilizzare il ciclo for con gli array, ma utilizzare il for of oppure for each
+
+        document.write('<hr>');
+
+
+        //for of per ciclare array
+         pizze = ['Margherita','Diavola','Marinara','Mimosa'];
+        for(let pizza of pizze){
+            document.write(`<div>${pizza} </div>`)
+
+        }
+
+
+        document.write('<hr>')
+
+        for(let lettera of 'testo'){//a goni iterazione aggiunge il trattino, utilizzo x ciclare array
+            document.write(lettera + '-');
+        }
+
+        document.write('<hr>')
+
+        //for in per ciclare oggetti
+        let margherita = {
+            gusto: 'Margherita',
+            prezzo: 5,
+            metodo: function(){}
+        }
+
+        let campiVisualizzati = ['gusto', 'prezzo']
+        for(let prop in margherita){//per ogni proprietà che ce dentro l'oggetto margherita scrivi a video, utilizzo x ciclare oggetti
+
+        if(campiVisualizzati.includes(prop)){
+            document.write(`<div>${prop} : ${margherita[prop]} </div>`)
+        }
         }
     </script>
 </body>
