@@ -62,7 +62,7 @@
         console.log(somma);
 
 
-        number =[1,20,300,400000]
+        number = [1, 20, 300, 400000]
         let numeroGrande = number.reduce(function (p, c) {//restituisce il numero più grande dell'array
             if (p > c) {
                 return p;
@@ -73,6 +73,45 @@
         })
         console.log(numeroGrande);
 
+        //eliminare da un array utilizzando:
+        pizze = ['Margherita', 'Diavola', 'Marinara', 'Mimosa'];
+
+        pizze = pizze.filter(function (p) {
+            return p != 'Mimosa';
+        })
+        console.log(pizze);
+
+        //eliminazione diretta:
+        pizze = ['Margherita', 'Diavola', 'Marinara', 'Mimosa'];
+        let indice = pizze.indexOf('Marinara');//trova la marinara e dimmi in che posizione è
+        console.log(indice);
+
+        let pizzeCopy = Array.from(pizze)//generazione di una copia di un array x mantenere intatto l'altro
+        pizze.splice(indice, 1);//cerca un elemento basandosi su un indice e lo elimina('marinara')
+        console.log(pizze);
+
+        //eliminazione da array di oggeti
+        pizze = [
+            {
+                gusto: 'Margherita',
+                prezzo: 5,
+                disponibile: true
+            }, {
+                gusto: 'Diavola',
+                prezzo: 1,
+                disponibile: true
+            }, {
+                gusto: 'Hawayana',
+                prezzo: 500,
+                disponibile: false
+            }];
+
+            let index = pizze.findIndex(function(p){//è un mic tra find e indexOf, quindi trova un elemento nell'array e restituisce l'inidce del primo che trova
+            return p.disponibile === false;
+            })
+            console.log(index);
+            pizze.splice(index,1,);
+            console.log(pizze);
     </script>
 </body>
 
