@@ -1,0 +1,23 @@
+.container{
+    width: 400px;
+}
+
+.colonna{
+    display: inline-block;
+    height: 100px;
+    width: calc(100% / 4 - 0.4rem);
+    margin: 1px;
+    background-color: grey;
+}
+
+#display{
+    display: block;
+    width: 387px;
+    height: 40px;
+}
+
+#uguale{
+    display: block;
+    width: 393px;
+    height: 70px;
+}

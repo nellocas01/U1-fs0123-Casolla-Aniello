@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compito S2/L5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+
+        <h1>La mia calcolatrice in JS</h1>
+
+        <input type="text" id="display">
+
+        <button data-simbolo="7" class="colonna" onclick="aggiungiSimbolo(this)">7</button>
+        <button data-simbolo="8" class="colonna" onclick="aggiungiSimbolo(this)">8</button>
+        <button data-simbolo="9" class="colonna" onclick="aggiungiSimbolo(this)">9</button>
+        <button data-simbolo="/" class="colonna" onclick="aggiungiSimbolo(this)">/</button>
+        <button data-simbolo="4" class="colonna" onclick="aggiungiSimbolo(this)">4</button>
+        <button data-simbolo="5" class="colonna" onclick="aggiungiSimbolo(this)">5</button>
+        <button data-simbolo="6" class="colonna" onclick="aggiungiSimbolo(this)">6</button>
+        <button data-simbolo="*" class="colonna" onclick="aggiungiSimbolo(this)">x</button>
+        <button data-simbolo="1" class="colonna" onclick="aggiungiSimbolo(this)">1</button>
+        <button data-simbolo="2" class="colonna" onclick="aggiungiSimbolo(this)">2</button>
+        <button data-simbolo="3" class="colonna" onclick="aggiungiSimbolo(this)">3</button>
+        <button data-simbolo="-" class="colonna" onclick="aggiungiSimbolo(this)">-</button>
+        <button data-simbolo="C" class="colonna" onclick="aggiungiSimbolo(this)">C</button>
+        <button data-simbolo="0" class="colonna" onclick="aggiungiSimbolo(this)">0</button>
+        <button data-simbolo="." class="colonna" onclick="aggiungiSimbolo(this)">.</button>
+        <button data-simbolo="+" class="colonna" onclick="aggiungiSimbolo(this)">+</button>
+        <button id="uguale" class="colonna" onclick="totale()">=</button>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
+
+<!--
+conoscere funzioni 
+variabili
+eventti
+saper leggere o scrivere
+calcolatrice basic 
+css un minimo bellina 
+
+attenzione ai selettori
+document get elementbyid restituisce un valore in una variabile
+usare console dir 
+divs[0].innerHTML='quello che voglio scriverci'
+usare eval() x il totale ma solo x domani
+cè un bug da risolvere, 
+*/
+
+display inline block per allineare i tasti tra di loro 
+fare un bel div x racchiudere la calc e metterci un input 
+mettere tanti bottoni e ai bottoni display inline block x affiancarli
+vietata la tabella e float ASSOLUTAMENTE
+ma le griglie
+
+nella console modificare il margine con ctrl e freccette
+
+andare a vedere grid è accettabile, forse meglio flex, o inline block ,oppure bootstrap
+
+in input anche se ci scrivi fa nulla, (magari vedere preventdefault!!)
+da 0 a 9, poter cancellare tutto settare la value a stringa vuota '' (value = '')
+il . la x è * e = calcola
+
+extra
+calc scientifica 
+fare uguale senza eval 
+dimostrazione di creatività interessanti interattivi 
+-->
