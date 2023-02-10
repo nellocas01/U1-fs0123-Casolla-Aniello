@@ -7,17 +7,28 @@
     height: 100px;
     width: calc(100% / 4 - 0.4rem);
     margin: 1px;
-    background-color: grey;
+    background-color: rgb(85, 183, 85);
 }
 
 #display{
     display: block;
     width: 387px;
     height: 40px;
+    background-color: lightgreen;
+    color: black;
+    font-weight: bold; 
+    cursor: pointer;
+    text-align: center;
 }
 
 #uguale{
     display: block;
     width: 393px;
     height: 70px;
+}
+
+button{
+    color: aliceblue;
+    font-weight: bold; 
+    cursor: pointer;
 }

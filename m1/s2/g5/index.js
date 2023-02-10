@@ -9,6 +9,7 @@ function aggiungiSimbolo(elemento){
 function totale(){
     let display = document.querySelector('#display');
     display.value = eval(display.value);
+
 }
 
 function cancella(){
