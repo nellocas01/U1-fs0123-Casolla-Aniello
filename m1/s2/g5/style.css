@@ -4,20 +4,21 @@
 
 .colonna{
     display: inline-block;
-    height: 100px;
+    height: 70px;
     width: calc(100% / 4 - 0.4rem);
     margin: 1px;
-    background-color: rgb(85, 183, 85);
+    background-color: rgb(225, 52, 52);
 }
 
 #display{
     display: block;
     width: 387px;
     height: 40px;
-    background-color: lightgreen;
+    background-color: rgb(226, 86, 86);
     color: black;
     font-weight: bold; 
-    cursor: pointer;
+    font-size: medium;
+    cursor: text;
     text-align: center;
 }
 
