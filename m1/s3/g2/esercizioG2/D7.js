@@ -2,39 +2,98 @@
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
+function concatena(x,y){
+  let w = x.substr(0,2);
+  let z = y.substr(2,3);
+  let maiusc = w + z;
+  console.log(maiusc.toUpperCase());
+
+}
+concatena('Hello','world');
 
 /* ESERCIZIO 2
   Scrivi una funzione per creare un array di soli valori DISPARI da 1 a 100.
  */
-
+var pari = [];
+var disp = [];
+function dispari(){
+for(var i = 0; i < 101; i++){
+  if(i % 2 == 0){
+    pari.push([i]);
+  }else{
+    disp.push([i]);
+  }
+}
+console.log(disp);
+}
+dispari();
 /* ESERCIZIO 3
   Scrivi una funzione per creare un array di soli valori multipli di 5, da 1 a 100.
  */
-
+  var mult = [];
+  function multipli(){
+  for(var i = 0; i < 101; i++){
+    if(i % 5 == 0){
+      mult.push([i]);
+    }else{
+      
+    }
+  }
+  console.log(mult);
+  }
+  multipli();
 /* ESERCIZIO 4
   Scrivi una funzione per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
  */
+  var rand = [];
+  function casuali(){
+  for(var i = 0; i < 10; i++){
+    var n = Math.random()*101
+    rand.push(n);
+  }
+  console.log(rand);
+}
+  casuali();
 
 /* ESERCIZIO 5
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici.
  */
-
+  let num = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map(n => n % 2 == 0);
+  if(num == 0){
+    //console.log(num + 'pari');
+  }else{
+    console.log(num + 'dispari');
+  }
+ 
 /* ESERCIZIO 6
   Scrivi una funzione per sommare a catena i numeri contenuti in un array.
  */
-
+  let number = [10,20,30,40,50,60,70,80,90,100,110,120,130,140,150];
+  let sum = number.reduce(function(x,y){
+    return x + y;
+  })
+  console.log(sum);
 /* ESERCIZIO 7
   Scrivi una funzione per incrementare di 1 tutti i valori numerici in un array.
 */
-
+let numeri = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map(n => n += 1);
+console.log(numeri);
 /* ESERCIZIO 8
   Sostituisci ogni stringa contenuta in un array con un numero rappresentante la sua lunghezza.
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
-
+let str = ["EPICODE", "is", "great"];
+console.log(str);
 /* ESERCIZIO 9 (EXTRA)
   Scrivi una funzione per eliminare solo i valori PARI da un array.
-*/
+*/ 
+let DISPARI = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map(n => n % 2 == 0);
+if(n = 0){
+  console.log(n + 'NOCE');
+}else{
+console.log(n + 'pappice');
+
+}
 
 /* ESERCIZIO 10 (EXTRA)
   Scrivi una funzione per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 10 (incluso), SENZA AMMETTERE DUPLICATI.
