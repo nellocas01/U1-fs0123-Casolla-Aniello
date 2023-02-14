@@ -19,9 +19,9 @@ var disp = [];
 function dispari(){
 for(var i = 0; i < 101; i++){
   if(i % 2 == 0){
-    pari.push([i]);
+    pari.push(i);
   }else{
-    disp.push([i]);
+    disp.push(i);
   }
 }
 console.log(disp);
@@ -34,7 +34,7 @@ dispari();
   function multipli(){
   for(var i = 0; i < 101; i++){
     if(i % 5 == 0){
-      mult.push([i]);
+      mult.push(i);
     }else{
       
     }
@@ -58,13 +58,9 @@ dispari();
 /* ESERCIZIO 5
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici.
  */
-  let num = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map(n => n % 2 == 0);
-  if(num == 0){
-    //console.log(num + 'pari');
-  }else{
-    console.log(num + 'dispari');
-  }
- 
+  let num = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].filter(n => n % 2 == 0);
+  
+    console.log(num);
 /* ESERCIZIO 6
   Scrivi una funzione per sommare a catena i numeri contenuti in un array.
  */
@@ -83,26 +79,36 @@ console.log(numeri);
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 let str = ["EPICODE", "is", "great"];
-console.log(str);
+function lunghezza(){
+  for(let i = 0; i < str.length; i++){
+    str[i] = str[i].length;
+  }
+   console.log(str);
+}
+lunghezza();
 /* ESERCIZIO 9 (EXTRA)
   Scrivi una funzione per eliminare solo i valori PARI da un array.
 */ 
-let DISPARI = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map(n => n % 2 == 0);
-if(n = 0){
-  console.log(n + 'NOCE');
-}else{
-console.log(n + 'pappice');
-
-}
+let DISPARI = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].filter(n => n % 2 == 1);
+console.log(DISPARI);
 
 /* ESERCIZIO 10 (EXTRA)
   Scrivi una funzione per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 10 (incluso), SENZA AMMETTERE DUPLICATI.
  */
-
+var x = [];
+function element(){
+for(var i = 0; i < 10; i++){
+  x[i] = Math.random()*11;
+}
+console.log(x);
+}
+element();
 /* ESERCIZIO 11 (EXTRA)
   Scrivi un algoritmo in grado di invertire un array.
   es: [1, 3, 5] ==> [5, 3, 1]
 */
+let inverti = [1, 3, 5].reverse();
+console.log(inverti);
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -223,15 +229,30 @@ const movies = [
 /* ESERCIZIO 12
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+var antico = [];
+function storico(){
+movies.forEach(Year => antico.push(Year.Year));
+console.log(antico);
+}
+storico();
 
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+var numFilm = [];
+function quantity(){
 
+}
+quantity();
 /* ESERCIZIO 14
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
-
+var tit = [];
+function titFilm(){
+movies.forEach(Title => tit.push(Title.Title));
+console.log(tit);
+}
+titFilm();
 /* ESERCIZIO 15
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
@@ -243,7 +264,15 @@ const movies = [
 /* ESERCIZIO 17
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
-
+var sumFilm = [];
+function sommaFilm(){
+movies.forEach(Year => sumFilm.push(Year.Year));
+var anni = sumFilm.reduce(function(x,y){
+  return x + y;
+})
+console.log(anni);
+}
+sommaFilm();
 /* ESERCIZIO 18 (EXTRA)
   Scrivi una funzione per recuperare tutti i film dall'array fornito che contengono una parola fornita.
 */
