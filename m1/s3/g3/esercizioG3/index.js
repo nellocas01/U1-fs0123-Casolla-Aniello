@@ -19,18 +19,16 @@ function createList(){
     li.append(del);
     taskList.append(li);
     
-}
-
-
-
+    
     let buttonDelete = document.querySelectorAll('#task-list button');
-
+    
     for(button of buttonDelete){
-    buttonDelete.addEventListener('click', () => {
-
-        
-        li.remove();
-        
-    });
+        button.addEventListener('click', () => {
+            
+            
+            li.remove();
+            
+        });
+    }
 
 }
