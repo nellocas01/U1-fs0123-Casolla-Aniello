@@ -9,7 +9,7 @@
 <body>
 
     <script>
-
+        
         class Veicoli{
             constructor(_tipo,_nRuote, _maxVel, _nPorte, _marca){
                 this.tipo = _tipo;
@@ -37,6 +37,8 @@
         let bici1 = new Veicoli('bicicletta',2, 30, 0, 'Bianchi');
         let bici2 = new Veicoli('bicicletta',2, 50, 0, 'Trek');
 
+
+        //extends può essere inserito all'inetnro di una classe per inserire una sottoclasse 
 
         class Bici extends Veicoli{
             constructor(_maxVel, _marca){//il costruttore di bici
