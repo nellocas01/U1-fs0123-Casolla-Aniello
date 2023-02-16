@@ -135,6 +135,11 @@
 
       /* ESERCIZIO 12
        Crea un messaggio di benvenuto con un alert quando la pagina ha finito di caricarsi.
+      
+       window.onload = async function () {
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        alert('ha caricato la pagina grazie ciao!');
+      };
       */
 
       window.onload = function () {
@@ -142,3 +147,4 @@
         alert('BENVENUTO');
       }
       onload();
+      
