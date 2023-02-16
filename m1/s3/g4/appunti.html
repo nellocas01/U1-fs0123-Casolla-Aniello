@@ -1,0 +1,75 @@
+<!--
+    FORM : 
+    si utilizza per inviare un form per farlo ha bisogno di queste 2 keywords solitamente,
+    action serve a dire dove vanno inviati i dati, e nn può essere utilizzato solo con js;  method è impostato a GET o POST, ed è la modalità di invio dei dati
+    aggiungendo i query param;
+    GET
+    http è stateless cioè che nel momento in cui inviamo i dati a una pagina nn li memorizza al refresh li perde, non mantiene uno stato
+    POST
+    fa un invio di dati molto più grande, ed è quello più usato anche x avere un indirizzo più pulito e si possono leggere;
+
+    BUTTON type  "button" non invierà un form tipo x per mostrare/nascondere la password
+
+    come gestire gli eventi del form: con addeventlistener
+
+    per iniziare bisgogna dare un id al form e inserirlo in una variabile (form id "mioform"HTML let mioform=doc.getelbyid('mioform')) 
+    agganciarsi al form (mioform.) + addeventlistener('clcik', function(){}) submit è un evento specifico x il form però per evitare dei problemi si può usare il click
+    quindi al click dico prendimi la variabile nome e mettici un puntatore  per fare una validazione utilizzando anche un ciclo 
+    un metodo utilizzato è e.preventdefault che blocca i funzionamenti predefiiniti 
+    NEXTSIBLING 
+
+    VALIDAZIONE 2 :
+    required si utilizza nell'input html per dare indicazioni sul campo da inserire; per email usare required pattern"[a-z0-9{2,10}@a-z0-9]
+
+    HISTORY :
+    il target punta all'elemento dell'a(ncora) interna
+    quindi con history possiamo scorrere avanti e indietro con le finestre del browser < indietro > avanti tra le varie pagine
+
+    COOKIE :
+    funzionano solo con live server poichè ce bisogno di un dominio; li troviamo nell'aria application(dove ce console)
+    si crea facendo document.cookie = "nome=michele" coppia chiave valore
+    = con cookie va ad aggiungere;
+    sono coppie chiave valore passate sottoforma di stringa;
+    i cookie di sessione sono attivi fin quando nn si chiude la pag
+    i cookie problematici sono quelli che durano per molto tempo 
+    il modo più semplice per fare un cookie con scadenza è : var now = new Date() now.setMonth(per prendere il mese attuale) 
+    ad oggi l'unico modo x leggerli è console.log(document.cookie) e torna una stringa
+
+    AJAX :
+    oggi xml nn si usa, ma si usa json;
+    oggi il web si sviluppa con ajax 
+
+    JSON
+    presenta degli oggeti tipo javascript che nn possono avere funzioni
+    la chiave ha solo le doppie virgole "" le altre nn le accetta '' ``;
+    lo coppie chiave valore sono separate con la virgola,  tranne l'ultima
+    JSON VALIDATOR può aiutare è un sito molto utile (https://jsonformatter.curiousconcept.com/#)
+
+    PARSE - JSON STRINGIFY :
+    JSON STRINGIFY prende una qualunque notazione[array...] e la trasforma ina una stringa json
+
+    LOCALSTORAGE SESSIONSTORAGE
+    ci permettono di fare un salvataggio del valore ed esso  cio con SET e GET item()
+
+    il localstorag ha dei metodi che non avrà scadenza e cè molto spazio tutto
+
+    Il SESSION STORAGE
+    per lavorarci si usano gli stessi metodi
+    la differenza è che la durata termina quando si chiude la sessione quindi ha scadenza a differenza del localstorage
+
+    setitem non accetta nient'altro che stringhe, e si salvano sottoforma di json.
+
+    sulla base di tutto cio si può creare una webapp x far salvare i dati all'utente;
+
+    FETCH :
+    è un nuovo sistema che ha sostituito XML
+    è in grado di far chiamate esterne, ed è velocissimo per fare delle chiamate
+    dicendo fetc(dove si trova il file)
+    restituisce una PROMISE agganciandole con un .then()
+    controllare lo status(dove cè il valore del messaggio errore)
+    per recuperare i dati si chiede a json con funzione freccia
+
+
+    MENU JSON :
+
+-->
