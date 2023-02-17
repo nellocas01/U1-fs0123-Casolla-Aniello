@@ -289,19 +289,20 @@ whatDayIsIt();
       sum: 10
       values: [3, 3, 4]
   }
-
-function rollTheDices(x){
-dice(x)
-totale = {
-  sum: y,
-  values: []
-}
-}
-rollTheDices();*/
+  function rollTheDices(x){
+    dice() * x;
+    totale = {
+      sum: y,
+      values: []
+    }
+  }
+  rollTheDices();
+  */
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro 
   e ritorna il numero di giorni trascorsi da tale data.
+
   function howManyDays(data){
     let today = date.getDate();
     let differenza = today - data;
@@ -313,6 +314,7 @@ rollTheDices();*/
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi
    è il tuo compleanno, falso negli altri casi.
+
    function isTodayMyBirthday(compleanno){
      if(compleanno = date.getDate()){
        console.log(compleanno);
@@ -375,13 +377,14 @@ countMovies();
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i
    film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
-   */
-  function onlyInLastMillennium(){
+
+   function onlyInLastMillennium(){
      var cerca = [];
      movies.forEach(m => cerca.push(m.Year));
      console.log(cerca);
     }
     onlyInLastMillennium();
+    */
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli
    anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
@@ -417,26 +420,26 @@ searchAndDivide();
   rimuovere l'indice in un array quindi lo restituisce senza
 */
 
-// DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina) 
+// DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina) 18
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno 
   della pagina.
-  no getelementbyid ma fare una funzione che fa la selezione e restituisce
 */
 const select = function(){
   let contenitore = document.querySelector('#container');
   return contenitore;
 }
+select();
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
   
 */
 const tag = function(){
-
   let x = document.querySelectorAll('td');
   return x;
 }
+tag();
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto 
   in ogni tag <td> all'interno della pagina.
@@ -444,9 +447,10 @@ const tag = function(){
 const stampa = function(){
   let contenuto = document.querySelectorAll('td');
   contenuto.forEach(content => {
-    console.log(ccontent);
+    console.log(content);
   })
 }
+stampa();
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni 
@@ -454,7 +458,7 @@ const stampa = function(){
 */
 const red = function (){
   let sfondo = document.querySelector('link');
- // sfondo.style.backgroundColor = 'red';
+  sfondo.style.backgroundColor = 'red';
 }
 red();
 /* ESERCIZIO 24
@@ -471,12 +475,26 @@ let nuovoElemento = 'Nuovo';
         elemento.appendChild(li);
       }
       aggiungi(nuovoElemento);
+      
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
+
+const svuota = function(content){
+let elemento = document.getElementById('myList');
+
+}
+svuota(content);
 */
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
+
+const classe = function(){
+let test = document.querySelectorAll('tr');
+let t = test.getAttribute(".test");
+console.log(t);
+}
+classe();
 */
 
 // [EXTRA] JS Avanzato
