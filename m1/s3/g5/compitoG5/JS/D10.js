@@ -174,20 +174,20 @@ console.log(me);
   creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
 let skills = ["HTML","CSS","JAVASCRIPT"];
-Object.assign(me, [skills])
+me.skills = skills;
 console.log(me);
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills"
    contenuto nell'oggetto "me".
 */
 let nuovaSkill = "JAVA";
-me[0].push(nuovaSkill);
+me.skills.push(nuovaSkill);
 console.log(me);
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento 
   dall'array "skills" contenuto nell'oggetto "me".
 */
-me[0].pop();
+me.skills.pop()
 console.log(me);
 // Funzioni
 
@@ -195,8 +195,8 @@ console.log(me);
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 function dice(){
-  let x = Math.floor(Math.random()* 6)+1;
-  console.log(x);
+  return Math.floor(Math.random()* 6)+1;
+  
 }
 dice();
 /* ESERCIZIO 2
@@ -230,17 +230,16 @@ splitMe("I love coding");
    parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo 
   carattere, altrimenti la deve ritornare senza l'ultimo.
-  function deleteOne(string, Boolean){
-    if(Boolean === true){
-      let x = string.shift();
-      console.log(x);
-    }else if(Boolean === false){
-      let y = string.pop();
-      console.log(y);
+  */
+
+  function deleteOne(string, bool){
+    if(bool){
+      return string.substr(1, string.length);
+    }else {
+      return string.substr(0, string.length-1);
     }
   }
-  deleteOne('ciao',true);
-  */
+  deleteOne("ciao",false);
 
 
 /* ESERCIZIO 5
@@ -249,8 +248,7 @@ splitMe("I love coding");
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 function onlyLetters(string){
-let x = string.split(/\d/);
-return x;
+return string.replace(/\d/,'')
 }
 onlyLetters("I have 4 dogs");
 
@@ -348,11 +346,9 @@ deleteProp();
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente 
   nell'array "movies" fornito.
   */
-  var recente = [];
-  function newestMovie(){
-   movies.forEach(Year => recente.push(Year.Year));
-   let m = Math.max(...recente);
-   console.log(m);
+ function newestMovie(){
+    var sortedMovies = movies.sort((a,b) => a.Year - b.Year);
+  console.log(sortedMovies[movies.length-1]);
   }
   newestMovie();
 
@@ -360,10 +356,8 @@ deleteProp();
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti
    nell'array "movies" fornito.
 */
-var n = [];
 function countMovies(){
-movies.forEach(movies => n.push(movies));
-return n.length;
+return movies.length;
 }
 countMovies();
 
@@ -371,9 +365,9 @@ countMovies();
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente 
   gli anni di uscita dei film contenuti nell'array "movies" fornito.
   */
-  var anni = [];
-  function onlyTheYears(){
-    movies.forEach(Year => anni.push(Year.Year));
+ function onlyTheYears(){
+    var anni = [];
+    movies.forEach(m => anni.push(m.Year));
     console.log(anni);
    }
   onlyTheYears();
@@ -381,24 +375,29 @@ countMovies();
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i
    film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
-*/
-var cerca = [];
-
-function onlyInLastMillennium(){
-movies.forEach(Year => millennio.push(Year.Year));
-console.log(millennio <= 1999);
-}
-onlyInLastMillennium();
+   */
+  function onlyInLastMillennium(){
+     var cerca = [];
+     movies.forEach(m => cerca.push(m.Year));
+     console.log(cerca);
+    }
+    onlyInLastMillennium();
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli
    anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
+function sommaFilm(){
 
+}
+sommaFilm();
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro
    e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
-
+function searchByTitle(string){
+ console.log(movies);
+}
+searchByTitle();
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro 
   e ritorna un oggetto contenente due array: "match" e "unmatch".
@@ -406,37 +405,72 @@ onlyInLastMillennium();
    stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti
     i rimanenti.
 */
+function searchAndDivide(string){
+var match = [];
+var unmatch = [];
 
+}
+searchAndDivide();
 /* ESERCIZIO 19
-  Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
+  Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna
+   l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
   rimuovere l'indice in un array quindi lo restituisce senza
 */
 
-// DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)  creare html a mano e fare gli esercizi
+// DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina) 
 
 /* ESERCIZIO 20
-  Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
+  Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno 
+  della pagina.
   no getelementbyid ma fare una funzione che fa la selezione e restituisce
 */
-
+const select = function(){
+  let contenitore = document.querySelector('#container');
+  return contenitore;
+}
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
-  funzione e riga non srve neanche lanciarla
+  
 */
+const tag = function(){
 
+  let x = document.querySelectorAll('td');
+  return x;
+}
 /* ESERCIZIO 22
-  Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
-  fare una serie di td quindi fare una tabella nella pagina e ciclare il contenuto di ogni td
+  Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto 
+  in ogni tag <td> all'interno della pagina.
 */
+const stampa = function(){
+  let contenuto = document.querySelectorAll('td');
+  contenuto.forEach(content => {
+    console.log(ccontent);
+  })
+}
 
 /* ESERCIZIO 23
-  Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
+  Scrivi una funzione per aggiungere un background di colore rosso a ogni 
+  link all'interno della pagina.
 */
-
+const red = function (){
+  let sfondo = document.querySelector('link');
+ // sfondo.style.backgroundColor = 'red';
+}
+red();
 /* ESERCIZIO 24
-  Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
+  Scrivi una funzione per aggiungere un nuovo elemento alla lista non 
+  ordinata con id "myList".
 */
-
+let nuovoElemento = 'Nuovo';
+      const aggiungi = function (content) {
+        //
+        let elemento = document.getElementById('myList');
+        let li = document.createElement('li');
+        let textli = document.createTextNode(content);
+        li.appendChild(textli);
+        elemento.appendChild(li);
+      }
+      aggiungi(nuovoElemento);
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
@@ -474,4 +508,3 @@ onlyInLastMillennium();
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
-
