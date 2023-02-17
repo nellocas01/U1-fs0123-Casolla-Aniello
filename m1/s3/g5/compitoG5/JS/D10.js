@@ -389,10 +389,12 @@ countMovies();
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli
    anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
-function sommaFilm(){
-
+function sumAllTheYears(){
+  var years = 0;
+  movies.forEach(m => years += Number(m.Year) );
+  return years
 }
-sommaFilm();
+sumAllTheYears();
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro
    e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
@@ -475,7 +477,7 @@ let nuovoElemento = 'Nuovo';
         elemento.appendChild(li);
       }
       aggiungi(nuovoElemento);
-      
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 
