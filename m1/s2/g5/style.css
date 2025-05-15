@@ -1,35 +1,55 @@
-.container{
-    width: 400px;
+:root {
+  --color-bg: #f0f0f0;
+  --color-primary: #12baed;
+  --color-accent: #2454cc;
+  --btn-color: #ffffff;
+  --btn-size: 70px;
 }
 
-.colonna{
-    display: inline-block;
-    height: 70px;
-    width: calc(100% / 4 - 0.4rem);
-    margin: 1px;
-    background-color: rgb(18, 186, 237);
+body {
+  font-family: sans-serif;
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
 }
 
-#display{
-    display: block;
-    width: 387px;
-    height: 40px;
-    background-color: rgb(36, 84, 204);
-    color: black;
-    font-weight: bold; 
-    font-size: medium;
-    cursor: text;
-    text-align: center;
+.container {
+  width: 100%;
+  max-width: 400px;
 }
 
-#uguale{
-    display: block;
-    width: 393px;
-    height: 70px;
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
 }
 
-button{
-    color: aliceblue;
-    font-weight: bold; 
-    cursor: pointer;
+button {
+  height: var(--btn-size);
+  background-color: var(--color-primary);
+  color: var(--btn-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#uguale {
+  grid-column: span 4;
+  background-color: var(--color-accent);
+}
+
+#display {
+  margin-bottom: 0.5rem;
+  display: block;
+  width: 387px;
+  height: 40px;
+  background-color: rgb(219, 226, 243);
+  color: black;
+  font-weight: bold;
+  font-size: medium;
+  cursor: text;
+  text-align: center;
 }

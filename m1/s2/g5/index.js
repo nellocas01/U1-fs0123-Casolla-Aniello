@@ -1,18 +1,27 @@
-function aggiungiSimbolo(elemento){
-    //let simbolo = elemento.textContent;
-    let simbolo = elemento.getAttribute('data-simbolo');
+document.addEventListener('DOMContentLoaded', () => {
+  const display = document.querySelector('#display');
+  const buttons = document.querySelectorAll('button[data-simbolo]');
+  const equalBtn = document.querySelector('#uguale');
+  const clearBtn = document.querySelector('[data-simbolo="C"]');
 
-    let display = document.querySelector('#display');
-    display.value += simbolo;
-}
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const simbolo = button.dataset.simbolo;
+      if (simbolo === 'C') return;
+      display.value += simbolo;
+    });
+  });
 
-function totale(){
-    let display = document.querySelector('#display');
-    display.value = eval(display.value);
+  equalBtn.addEventListener('click', () => {
+    try {
+      // Alternativa più sicura a eval: new Function()
+      display.value = new Function('return ' + display.value)();
+    } catch {
+      display.value = 'Errore';
+    }
+  });
 
-}
-
-function cancella(){
-    let display = document.querySelector('#display');
-    display.value = "";
-}
+  clearBtn.addEventListener('click', () => {
+    display.value = '';
+  });
+});
