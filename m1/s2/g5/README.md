@@ -37,19 +37,15 @@ calculator/
    git clone https://github.com/nellocas01/U1-fs0123-Casolla-Aniello/tree/master/m1/s2/g5
    ```
 
-2. Apri il file index.html nel browser:
-
-cd [nome-repo](https://github.com/nellocas01/U1-fs0123-Casolla-Aniello/tree/master/m1/s2/g5)
-open index.html 
-# oppure doppio clic da file manager
+2. Apri il file index.html nel browser (oppure doppio clic da file manager)
 
 3. Inizia a utilizzare la calcolatrice!
 
-🔒 Sicurezza
+# 🔒 Sicurezza
 La funzione di calcolo utilizza il costruttore Function() al posto di eval() per migliorare la sicurezza e gestire meglio eventuali errori sintattici.
 
-👨‍💻 Autore
+# 👨‍💻 Autore
 Realizzato da Aniello Casolla – 10/02/2023.
 
-📌 Note
+# 📌 Note
 Questo progetto fa parte del mio percorso di apprendimento ed è stato creato per esercitarmi con JavaScript vanilla e DOM manipulation. Qualsiasi feedback è benvenuto!
