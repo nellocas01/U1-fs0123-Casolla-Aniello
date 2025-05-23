@@ -8,15 +8,27 @@
 
 body {
   font-family: sans-serif;
-  background-color: var(--color-bg);
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* gradiente */
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
+  background-color: rgba(255, 255, 255, 0.336);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* effetto card */
   width: 100%;
   max-width: 400px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 .buttons {
