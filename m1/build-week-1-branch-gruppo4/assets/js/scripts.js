@@ -1,5 +1,5 @@
 /**
- * MATERIALE FORNITO DALLA SCUOLA
+ * Domande da utilizzare per il quiz
  * ------------------------------------------------------------------------
  */
 const questions = [
